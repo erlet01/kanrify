@@ -1,0 +1,79 @@
+[data-theme="dark"] {
+  --background: #101419;
+  --sidebar-background: #15191d;
+  --card-background: #1a1f25;
+  --subtle-background: #202630;
+  --hover-background: #252d37;
+
+  --text-primary: #f8fafc;
+  --text-secondary: #94a3b8;
+  --text-muted: #9ca3af;
+
+  --border-color: #2a323d;
+  --card-border: #29313b;
+  --chart-grid: #303946;
+  --donut-background: #303946;
+
+  --sidebar-active-background: #252d37;
+  --sidebar-active-text: #f8fafc;
+  --primary-soft: #303946;
+  --toggle-track: #475569;
+  --tooltip-background: #202630;
+
+  --card-shadow: 0 9px 24px rgb(0 0 0 / 13%);
+}
+
+[data-theme="dark"] .theme-switch__thumb {
+  transform: translateX(15px);
+}
+
+[data-theme="dark"] .metric-icon--blue,
+[data-theme="dark"] .product-icon--blue,
+[data-theme="dark"] .file-icon--blue {
+  color: #a5b4fc;
+  background: #28324d;
+}
+
+[data-theme="dark"] .metric-icon--green,
+[data-theme="dark"] .product-icon--green {
+  color: #6ee7b7;
+  background: #173b34;
+}
+
+[data-theme="dark"] .metric-icon--orange,
+[data-theme="dark"] .file-icon--orange {
+  color: #fcd34d;
+  background: #44351a;
+}
+
+[data-theme="dark"] .metric-icon--purple,
+[data-theme="dark"] .file-icon--purple {
+  color: #c4b5fd;
+  background: #342751;
+}
+
+[data-theme="dark"] .product-icon--red {
+  color: #fca5a5;
+  background: #482529;
+}
+
+[data-theme="dark"] .status--success {
+  color: #6ee7b7;
+  background: #174637;
+}
+
+[data-theme="dark"] .status--warning,
+[data-theme="dark"] .status--pending {
+  color: #fcd34d;
+  background: #4a3818;
+}
+
+[data-theme="dark"] .status--danger {
+  color: #fca5a5;
+  background: #4a242a;
+}
+
+[data-theme="dark"] .status--progress {
+  color: #a5b4fc;
+  background: #2b2d59;
+}

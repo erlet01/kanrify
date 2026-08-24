@@ -1,0 +1,25 @@
+:root,
+[data-theme="light"] {
+  --background: #f4f7fb;
+  --sidebar-background: #f8fafc;
+  --card-background: #ffffff;
+  --subtle-background: #f8fafc;
+  --hover-background: #eef2f7;
+
+  --text-primary: #18181b;
+  --text-secondary: #52525b;
+  --text-muted: #71717a;
+
+  --border-color: #e7ebf0;
+  --card-border: #edf0f4;
+  --chart-grid: #e8edf3;
+  --donut-background: #e8edf3;
+
+  --sidebar-active-background: #e9eef5;
+  --sidebar-active-text: #1f2937;
+  --primary-soft: #e5e7eb;
+  --toggle-track: #cbd5e1;
+  --tooltip-background: #ffffff;
+
+  --card-shadow: 0 5px 18px rgb(15 23 42 / 3%);
+}

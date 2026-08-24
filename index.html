@@ -1,0 +1,620 @@
+<!DOCTYPE html>
+<html lang="pt-BR" data-theme="light">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta
+    name="description"
+    content="Dashboard Kanrify para gestão interna empresarial."
+  >
+
+  <title>Kanrify | Dashboard</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
+    rel="stylesheet"
+  >
+
+  <link rel="stylesheet" href="css/gerais.css">
+  <link rel="stylesheet" href="css/basico-claro.css">
+  <link rel="stylesheet" href="css/basico-escuro.css">
+</head>
+
+<body>
+  <div class="app-layout">
+    <aside class="sidebar" id="sidebar" aria-label="Navegação principal">
+      <div class="sidebar__header">
+        <a class="brand" href="#" aria-label="Kanrify Dashboard">
+          <span class="brand__symbol" aria-hidden="true">K</span>
+          <span class="brand__name">Kanrify</span>
+        </a>
+
+        <button
+          class="icon-button sidebar__collapse-button"
+          id="sidebarToggle"
+          type="button"
+          aria-label="Recolher menu lateral"
+          aria-expanded="true"
+          aria-controls="sidebar"
+        >
+          <svg viewBox="0 0 24 24" aria-hidden="true">
+            <path d="M15 18l-6-6 6-6"></path>
+          </svg>
+        </button>
+      </div>
+
+      <nav class="sidebar__navigation">
+        <p class="navigation-label">Visão geral</p>
+
+        <a class="nav-link nav-link--active" href="#" aria-current="page">
+          <svg viewBox="0 0 24 24" aria-hidden="true">
+            <rect x="3" y="3" width="7" height="7" rx="1"></rect>
+            <rect x="14" y="3" width="7" height="7" rx="1"></rect>
+            <rect x="3" y="14" width="7" height="7" rx="1"></rect>
+            <rect x="14" y="14" width="7" height="7" rx="1"></rect>
+          </svg>
+          <span>Dashboard</span>
+        </a>
+
+        <a class="nav-link" href="#">
+          <svg viewBox="0 0 24 24" aria-hidden="true">
+            <path d="M12 3v18"></path>
+            <path d="M5 9l7-6 7 6"></path>
+            <path d="M5 15l7 6 7-6"></path>
+          </svg>
+          <span>Solicitações</span>
+          <span class="nav-badge">8</span>
+        </a>
+
+        <p class="navigation-label">Gestão</p>
+
+        <a class="nav-link" href="#">
+          <svg viewBox="0 0 24 24" aria-hidden="true">
+            <path d="M4 19V5"></path>
+            <path d="M4 19h16"></path>
+            <path d="M8 16v-4"></path>
+            <path d="M12 16V8"></path>
+            <path d="M16 16v-7"></path>
+          </svg>
+          <span>Finanças</span>
+        </a>
+
+        <a class="nav-link" href="#">
+          <svg viewBox="0 0 24 24" aria-hidden="true">
+            <path d="M4 19V5"></path>
+            <path d="M4 19h16"></path>
+            <path d="M8 15l4-4 3 2 5-6"></path>
+            <circle cx="8" cy="15" r="1"></circle>
+            <circle cx="12" cy="11" r="1"></circle>
+            <circle cx="15" cy="13" r="1"></circle>
+            <circle cx="20" cy="7" r="1"></circle>
+          </svg>
+          <span>Reports</span>
+        </a>
+
+        <a class="nav-link" href="#">
+          <svg viewBox="0 0 24 24" aria-hidden="true">
+            <circle cx="12" cy="8" r="4"></circle>
+            <path d="M4 21c1.5-4 4.2-6 8-6s6.5 2 8 6"></path>
+            <path d="M17 5l1 1 2-2"></path>
+          </svg>
+          <span>Analista</span>
+        </a>
+
+        <p class="navigation-label">Sistema</p>
+
+        <a class="nav-link" href="#">
+          <svg viewBox="0 0 24 24" aria-hidden="true">
+            <circle cx="12" cy="12" r="3"></circle>
+            <path d="M19.4 15a1.7 1.7 0 0 0 .34 1.88l.06.06-2.12 2.12-.06-.06a1.7 1.7 0 0 0-1.88-.34 1.7 1.7 0 0 0-1.04 1.56V20.3h-3v-.08A1.7 1.7 0 0 0 10.66 18.66a1.7 1.7 0 0 0-1.88.34l-.06.06L6.6 16.94l.06-.06A1.7 1.7 0 0 0 7 15a1.7 1.7 0 0 0-1.56-1.04H5.3v-3h.14A1.7 1.7 0 0 0 7 9.92a1.7 1.7 0 0 0-.34-1.88L6.6 7.98 8.72 5.86l.06.06a1.7 1.7 0 0 0 1.88.34 1.7 1.7 0 0 0 1.04-1.56V4.62h3v.08a1.7 1.7 0 0 0 1.04 1.56 1.7 1.7 0 0 0 1.88-.34l.06-.06 2.12 2.12-.06.06A1.7 1.7 0 0 0 19.4 9.92a1.7 1.7 0 0 0 1.56 1.04h.14v3h-.14A1.7 1.7 0 0 0 19.4 15z"></path>
+          </svg>
+          <span>Configurações</span>
+        </a>
+
+        <a class="nav-link" href="#">
+          <svg viewBox="0 0 24 24" aria-hidden="true">
+            <circle cx="12" cy="12" r="9"></circle>
+            <path d="M9.4 9a2.7 2.7 0 1 1 4.5 2c-.9.76-1.9 1.26-1.9 2.5"></path>
+            <path d="M12 17h.01"></path>
+          </svg>
+          <span>Ajuda e suporte</span>
+        </a>
+      </nav>
+
+      <div class="sidebar__footer">
+        <button class="theme-switch" id="themeToggle" type="button" aria-label="Alternar tema">
+          <svg class="theme-switch__sun" viewBox="0 0 24 24" aria-hidden="true">
+            <circle cx="12" cy="12" r="4"></circle>
+            <path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M4.93 19.07l1.41-1.41M17.66 6.34l1.41-1.41"></path>
+          </svg>
+
+          <span class="theme-switch__label">Modo escuro</span>
+
+          <span class="theme-switch__track" aria-hidden="true">
+            <span class="theme-switch__thumb"></span>
+          </span>
+        </button>
+
+        <a class="user-profile" href="#">
+          <span class="avatar avatar--gradient">ML</span>
+          <span class="user-profile__content">
+            <strong>Mariana Lima</strong>
+            <small>Administradora</small>
+          </span>
+          <svg class="user-profile__arrow" viewBox="0 0 24 24" aria-hidden="true">
+            <path d="M9 18l6-6-6-6"></path>
+          </svg>
+        </a>
+      </div>
+    </aside>
+
+    <main class="main-content">
+      <header class="topbar">
+        <button
+          class="icon-button mobile-menu-button"
+          id="mobileMenuToggle"
+          type="button"
+          aria-label="Abrir menu lateral"
+          aria-controls="sidebar"
+        >
+          <svg viewBox="0 0 24 24" aria-hidden="true">
+            <path d="M4 7h16M4 12h16M4 17h16"></path>
+          </svg>
+        </button>
+
+        <form class="search-form" role="search">
+          <label class="sr-only" for="globalSearch">Pesquisar no sistema</label>
+          <svg viewBox="0 0 24 24" aria-hidden="true">
+            <circle cx="11" cy="11" r="6"></circle>
+            <path d="M20 20l-4-4"></path>
+          </svg>
+          <input
+            id="globalSearch"
+            type="search"
+            placeholder="Pesquisar documentos, clientes e relatórios..."
+            autocomplete="off"
+          >
+          <kbd>⌘ K</kbd>
+        </form>
+
+        <div class="topbar__actions">
+          <button class="icon-button notification-button" type="button" aria-label="Notificações">
+            <svg viewBox="0 0 24 24" aria-hidden="true">
+              <path d="M18 9a6 6 0 0 0-12 0c0 7-3 7-3 9h18c0-2-3-2-3-9"></path>
+              <path d="M10 21h4"></path>
+            </svg>
+            <span class="notification-indicator" aria-hidden="true"></span>
+          </button>
+
+          <button class="button button--primary" type="button" id="newRequestButton">
+            <svg viewBox="0 0 24 24" aria-hidden="true">
+              <path d="M12 5v14M5 12h14"></path>
+            </svg>
+            Nova solicitação
+          </button>
+        </div>
+      </header>
+
+      <section class="dashboard-page" aria-labelledby="pageTitle">
+        <div class="page-heading">
+          <div>
+            <p class="eyebrow">Visão operacional</p>
+            <h1 id="pageTitle">Dashboard</h1>
+            <p class="page-heading__description">
+              Acompanhe a performance e os principais indicadores da sua empresa.
+            </p>
+          </div>
+
+          <div class="date-filter">
+            <svg viewBox="0 0 24 24" aria-hidden="true">
+              <rect x="3" y="5" width="18" height="16" rx="2"></rect>
+              <path d="M7 3v4M17 3v4M3 10h18"></path>
+            </svg>
+            <select aria-label="Selecionar período">
+              <option>Últimos 30 dias</option>
+              <option>Últimos 7 dias</option>
+              <option>Este trimestre</option>
+              <option>Este ano</option>
+            </select>
+          </div>
+        </div>
+
+        <section class="metrics-grid" aria-label="Indicadores principais">
+          <article class="metric-card card">
+            <div class="metric-card__header">
+              <span class="metric-card__label">Receita total</span>
+              <span class="metric-icon metric-icon--blue">
+                <svg viewBox="0 0 24 24" aria-hidden="true">
+                  <path d="M4 19V5"></path>
+                  <path d="M4 19h16"></path>
+                  <path d="M8 16v-4M12 16V8M16 16v-7"></path>
+                </svg>
+              </span>
+            </div>
+            <strong class="metric-card__value">R$ 248.750</strong>
+            <p class="metric-card__comparison metric-card__comparison--positive">
+              <span>↗ 12,1%</span> em relação ao mês anterior
+            </p>
+          </article>
+
+          <article class="metric-card card">
+            <div class="metric-card__header">
+              <span class="metric-card__label">Lucro líquido</span>
+              <span class="metric-icon metric-icon--green">
+                <svg viewBox="0 0 24 24" aria-hidden="true">
+                  <path d="M4 17l5-5 4 3 7-8"></path>
+                  <path d="M15 7h5v5"></path>
+                </svg>
+              </span>
+            </div>
+            <strong class="metric-card__value">R$ 86.490</strong>
+            <p class="metric-card__comparison metric-card__comparison--positive">
+              <span>↗ 8,4%</span> em relação ao mês anterior
+            </p>
+          </article>
+
+          <article class="metric-card card">
+            <div class="metric-card__header">
+              <span class="metric-card__label">Solicitações abertas</span>
+              <span class="metric-icon metric-icon--orange">
+                <svg viewBox="0 0 24 24" aria-hidden="true">
+                  <path d="M12 3v18"></path>
+                  <path d="M5 9l7-6 7 6"></path>
+                  <path d="M5 15l7 6 7-6"></path>
+                </svg>
+              </span>
+            </div>
+            <strong class="metric-card__value">38</strong>
+            <p class="metric-card__comparison metric-card__comparison--neutral">
+              <span>14</span> aguardam aprovação
+            </p>
+          </article>
+
+          <article class="metric-card card">
+            <div class="metric-card__header">
+              <span class="metric-card__label">Taxa de eficiência</span>
+              <span class="metric-icon metric-icon--purple">
+                <svg viewBox="0 0 24 24" aria-hidden="true">
+                  <circle cx="12" cy="12" r="8"></circle>
+                  <path d="M12 7v5l3 2"></path>
+                </svg>
+              </span>
+            </div>
+            <strong class="metric-card__value">94,8%</strong>
+            <p class="metric-card__comparison metric-card__comparison--positive">
+              <span>↗ 2,3%</span> em relação ao mês anterior
+            </p>
+          </article>
+        </section>
+
+        <section class="dashboard-grid dashboard-grid--analytics">
+          <article class="card chart-card chart-card--large">
+            <header class="card__header">
+              <div>
+                <h2>Visão financeira</h2>
+                <p>Receitas e despesas nos últimos seis meses.</p>
+              </div>
+
+              <button class="button button--ghost" type="button">
+                <svg viewBox="0 0 24 24" aria-hidden="true">
+                  <path d="M12 3v12"></path>
+                  <path d="M7 10l5 5 5-5"></path>
+                  <path d="M5 21h14"></path>
+                </svg>
+                Exportar
+              </button>
+            </header>
+
+            <div class="chart-legend" aria-label="Legenda do gráfico">
+              <span><i class="legend-dot legend-dot--primary"></i> Receita</span>
+              <span><i class="legend-dot legend-dot--orange"></i> Despesas</span>
+            </div>
+
+            <div class="line-chart" role="img" aria-label="Gráfico de linha de receita e despesas">
+              <div class="line-chart__y-axis" aria-hidden="true">
+                <span>R$ 60k</span>
+                <span>R$ 45k</span>
+                <span>R$ 30k</span>
+                <span>R$ 15k</span>
+                <span>R$ 0</span>
+              </div>
+
+              <div class="line-chart__canvas">
+                <svg viewBox="0 0 760 290" preserveAspectRatio="none" aria-hidden="true">
+                  <defs>
+                    <linearGradient id="revenueGradient" x1="0" x2="0" y1="0" y2="1">
+                      <stop offset="0%" stop-color="#374151" stop-opacity="0.20"></stop>
+                      <stop offset="100%" stop-color="#374151" stop-opacity="0"></stop>
+                    </linearGradient>
+                  </defs>
+
+                  <g class="chart-grid-lines">
+                    <line x1="0" y1="10" x2="760" y2="10"></line>
+                    <line x1="0" y1="75" x2="760" y2="75"></line>
+                    <line x1="0" y1="140" x2="760" y2="140"></line>
+                    <line x1="0" y1="205" x2="760" y2="205"></line>
+                    <line x1="0" y1="270" x2="760" y2="270"></line>
+                  </g>
+
+                  <path
+                    class="chart-area"
+                    d="M0,194 C45,171 70,177 120,145 C170,112 198,132 245,111 C292,90 325,111 370,84 C420,54 450,78 500,59 C550,40 575,54 625,29 C678,8 714,29 760,17 L760,270 L0,270 Z"
+                    fill="url(#revenueGradient)"
+                  ></path>
+
+                  <path
+                    class="chart-line chart-line--revenue"
+                    d="M0,194 C45,171 70,177 120,145 C170,112 198,132 245,111 C292,90 325,111 370,84 C420,54 450,78 500,59 C550,40 575,54 625,29 C678,8 714,29 760,17"
+                  ></path>
+
+                  <path
+                    class="chart-line chart-line--expenses"
+                    d="M0,219 C45,209 76,218 120,196 C162,179 201,196 245,180 C291,161 329,181 370,165 C412,149 455,166 500,142 C544,122 580,146 625,120 C666,100 716,117 760,97"
+                  ></path>
+
+                  <g class="chart-points chart-points--revenue">
+                    <circle cx="0" cy="194" r="4"></circle>
+                    <circle cx="120" cy="145" r="4"></circle>
+                    <circle cx="245" cy="111" r="4"></circle>
+                    <circle cx="370" cy="84" r="4"></circle>
+                    <circle cx="500" cy="59" r="4"></circle>
+                    <circle cx="625" cy="29" r="4"></circle>
+                    <circle cx="760" cy="17" r="4"></circle>
+                  </g>
+                </svg>
+
+                <div class="chart-tooltip" id="chartTooltip">
+                  <strong>Junho</strong>
+                  <span>Receita: R$ 58.400</span>
+                </div>
+
+                <div class="line-chart__months" aria-hidden="true">
+                  <span>Jan</span>
+                  <span>Fev</span>
+                  <span>Mar</span>
+                  <span>Abr</span>
+                  <span>Mai</span>
+                  <span>Jun</span>
+                  <span>Jul</span>
+                </div>
+              </div>
+            </div>
+          </article>
+
+          <article class="card performance-card">
+            <header class="card__header">
+              <div>
+                <h2>Desempenho por área</h2>
+                <p>Distribuição das metas concluídas.</p>
+              </div>
+
+              <button class="icon-button" type="button" aria-label="Mais opções">
+                <svg viewBox="0 0 24 24" aria-hidden="true">
+                  <circle cx="5" cy="12" r="1"></circle>
+                  <circle cx="12" cy="12" r="1"></circle>
+                  <circle cx="19" cy="12" r="1"></circle>
+                </svg>
+              </button>
+            </header>
+
+            <div class="donut-layout">
+              <div class="donut-chart" role="img" aria-label="82 por cento das metas concluídas">
+                <svg viewBox="0 0 170 170" aria-hidden="true">
+                  <circle class="donut-chart__background" cx="85" cy="85" r="62"></circle>
+                  <circle class="donut-chart__progress" cx="85" cy="85" r="62"></circle>
+                </svg>
+                <div class="donut-chart__center">
+                  <strong>82%</strong>
+                  <span>Concluído</span>
+                </div>
+              </div>
+
+              <ul class="performance-list">
+                <li>
+                  <span class="performance-list__marker performance-list__marker--one"></span>
+                  <span class="performance-list__name">Operações</span>
+                  <strong>91%</strong>
+                </li>
+                <li>
+                  <span class="performance-list__marker performance-list__marker--two"></span>
+                  <span class="performance-list__name">Comercial</span>
+                  <strong>84%</strong>
+                </li>
+                <li>
+                  <span class="performance-list__marker performance-list__marker--three"></span>
+                  <span class="performance-list__name">Financeiro</span>
+                  <strong>72%</strong>
+                </li>
+              </ul>
+            </div>
+
+            <a class="text-link" href="#">
+              Ver relatório de desempenho
+              <svg viewBox="0 0 24 24" aria-hidden="true">
+                <path d="M5 12h14"></path>
+                <path d="M13 6l6 6-6 6"></path>
+              </svg>
+            </a>
+          </article>
+        </section>
+
+        <section class="dashboard-grid dashboard-grid--bottom">
+          <article class="card inventory-card">
+            <header class="card__header">
+              <div>
+                <h2>Controle de estoque</h2>
+                <p>Produtos que exigem atenção.</p>
+              </div>
+              <a class="button button--ghost" href="#">Ver estoque</a>
+            </header>
+
+            <div class="stock-summary">
+              <div class="stock-summary__item">
+                <span>Itens em estoque</span>
+                <strong>1.284</strong>
+              </div>
+              <div class="stock-summary__divider"></div>
+              <div class="stock-summary__item">
+                <span>Estoque baixo</span>
+                <strong class="text-warning">12</strong>
+              </div>
+              <div class="stock-summary__divider"></div>
+              <div class="stock-summary__item">
+                <span>Sem estoque</span>
+                <strong class="text-danger">3</strong>
+              </div>
+            </div>
+
+            <ul class="stock-list">
+              <li>
+                <div class="product-icon product-icon--blue">
+                  <svg viewBox="0 0 24 24" aria-hidden="true">
+                    <path d="M4 7l8-4 8 4-8 4-8-4z"></path>
+                    <path d="M4 7v10l8 4 8-4V7"></path>
+                    <path d="M12 11v10"></path>
+                  </svg>
+                </div>
+                <div class="stock-list__product">
+                  <strong>Notebook Pro 14"</strong>
+                  <span>SKU: NBP-1400</span>
+                </div>
+                <div class="stock-list__quantity">
+                  <strong>8 unidades</strong>
+                  <span class="status status--warning">Estoque baixo</span>
+                </div>
+              </li>
+
+              <li>
+                <div class="product-icon product-icon--green">
+                  <svg viewBox="0 0 24 24" aria-hidden="true">
+                    <path d="M4 7l8-4 8 4-8 4-8-4z"></path>
+                    <path d="M4 7v10l8 4 8-4V7"></path>
+                    <path d="M12 11v10"></path>
+                  </svg>
+                </div>
+                <div class="stock-list__product">
+                  <strong>Monitor UltraWide 29"</strong>
+                  <span>SKU: MNT-2900</span>
+                </div>
+                <div class="stock-list__quantity">
+                  <strong>24 unidades</strong>
+                  <span class="status status--success">Disponível</span>
+                </div>
+              </li>
+
+              <li>
+                <div class="product-icon product-icon--red">
+                  <svg viewBox="0 0 24 24" aria-hidden="true">
+                    <path d="M4 7l8-4 8 4-8 4-8-4z"></path>
+                    <path d="M4 7v10l8 4 8-4V7"></path>
+                    <path d="M12 11v10"></path>
+                  </svg>
+                </div>
+                <div class="stock-list__product">
+                  <strong>Headset Business</strong>
+                  <span>SKU: HDS-1120</span>
+                </div>
+                <div class="stock-list__quantity">
+                  <strong>0 unidades</strong>
+                  <span class="status status--danger">Indisponível</span>
+                </div>
+              </li>
+            </ul>
+          </article>
+
+          <article class="card requests-card">
+            <header class="card__header">
+              <div>
+                <h2>Solicitações recentes</h2>
+                <p>Acompanhe as últimas movimentações.</p>
+              </div>
+              <a class="button button--ghost" href="#">Ver todas</a>
+            </header>
+
+            <div class="table-wrapper">
+              <table>
+                <thead>
+                  <tr>
+                    <th scope="col">Solicitação</th>
+                    <th scope="col">Responsável</th>
+                    <th scope="col">Status</th>
+                    <th scope="col">Data</th>
+                  </tr>
+                </thead>
+
+                <tbody>
+                  <tr>
+                    <td>
+                      <div class="request-name">
+                        <span class="file-icon file-icon--purple">
+                          <svg viewBox="0 0 24 24" aria-hidden="true">
+                            <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path>
+                            <path d="M14 2v6h6"></path>
+                          </svg>
+                        </span>
+                        <span>
+                          <strong>Reembolso de viagem</strong>
+                          <small>FIN-4829</small>
+                        </span>
+                      </div>
+                    </td>
+                    <td><span class="avatar avatar--small avatar--blue">RS</span> Rafael Silva</td>
+                    <td><span class="status status--progress">Em análise</span></td>
+                    <td>Hoje, 10:32</td>
+                  </tr>
+
+                  <tr>
+                    <td>
+                      <div class="request-name">
+                        <span class="file-icon file-icon--blue">
+                          <svg viewBox="0 0 24 24" aria-hidden="true">
+                            <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path>
+                            <path d="M14 2v6h6"></path>
+                          </svg>
+                        </span>
+                        <span>
+                          <strong>Aquisição de equipamentos</strong>
+                          <small>COM-4817</small>
+                        </span>
+                      </div>
+                    </td>
+                    <td><span class="avatar avatar--small avatar--orange">AM</span> Ana Martins</td>
+                    <td><span class="status status--success">Aprovado</span></td>
+                    <td>Ontem, 16:45</td>
+                  </tr>
+
+                  <tr>
+                    <td>
+                      <div class="request-name">
+                        <span class="file-icon file-icon--orange">
+                          <svg viewBox="0 0 24 24" aria-hidden="true">
+                            <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path>
+                            <path d="M14 2v6h6"></path>
+                          </svg>
+                        </span>
+                        <span>
+                          <strong>Renovação de contrato</strong>
+                          <small>JUR-4802</small>
+                        </span>
+                      </div>
+                    </td>
+                    <td><span class="avatar avatar--small avatar--green">JC</span> João Costa</td>
+                    <td><span class="status status--pending">Pendente</span></td>
+                    <td>18 Ago, 09:15</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </article>
+        </section>
+      </section>
+    </main>
+  </div>
+
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
+
+  <script src="js/script.js"></script>
+</body>
+</html>
